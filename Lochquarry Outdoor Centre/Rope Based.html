@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lochquarry Outdoor Centre Rope Based activities</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="banner"></div>
+    </header>
+
+    <nav>
+    <a href="Index.html">Home Page</a>
+    <a href="Land Based.html">Land Based</a>
+    <a href="Water Based.html">Water Based</a>
+    <a href="Rope Based.html">Rope Based</a>
+    <a href="Site Information.html">Site Information</a>
+    <button class="booking-btn" id="openBooking">Booking</button>
+    </nav>
+
+
+    <main>
+
+    <section class="page-intro">
+        <h1>Rope Based Activities</h1>
+        <p>Rope-based activities focus on climbing skills, balance and confidence at height.</p>
+    </section>
+
+    <div class="cards">
+
+        <!-- Climbing (3 images) -->
+        <div class="card">
+        <div class="image-area">
+            <button class="prev-btn" onclick="prevClimbImage()">&#10094;</button>
+            <img id="climbImage" src="image/Rope Activities/Climbing.jpg" alt="Climbing">
+            <button class="next-btn" onclick="nextClimbImage()">&#10095;</button>
+        </div>
+
+        <h2>Climbing</h2>
+
+        <p class="activity-desc">
+            Learn basic climbing techniques on our outdoor climbing walls with qualified instructors.
+        </p>
+
+        <p class="activity-meta">
+            Max group size 8 • Ages 8+
+        </p>
+
+        <ul class="activity-links">
+            <li>
+            <a class="activity-btn"
+                href="https://en.wikipedia.org/wiki/Climbing"
+                target="_blank" rel="noopener noreferrer">
+                Learn about Climbing
+            </a>
+            </li>
+        </ul>
+        </div>
+
+        <!-- Abseiling (2 images) -->
+        <div class="card">
+        <div class="image-area">
+            <button class="prev-btn" onclick="prevAbseilImage()">&#10094;</button>
+            <img id="abseilImage" src="image/Rope Activities/Abseiling.jpg" alt="Abseiling">
+            <button class="next-btn" onclick="nextAbseilImage()">&#10095;</button>
+        </div>
+
+        <h2>Abseiling</h2>
+
+        <p class="activity-desc">
+            Descend safely down vertical rock faces using ropes and harnesses.
+        </p>
+
+        <p class="activity-meta">
+            Max group size 8 • Ages 8+
+        </p>
+
+        <ul class="activity-links">
+            <li>
+            <a class="activity-btn"
+                href="https://en.wikipedia.org/wiki/Abseiling"
+                target="_blank" rel="noopener noreferrer">
+                Learn about Abseiling
+            </a>
+            </li>
+        </ul>
+        </div>
+
+        <!-- Pole climbing (2 images) -->
+        <div class="card">
+        <div class="image-area">
+            <button class="prev-btn" onclick="prevPoleImage()">&#10094;</button>
+            <img id="poleImage" src="image/Rope Activities/Pole Climb.jpg" alt="Pole climbing">
+            <button class="next-btn" onclick="nextPoleImage()">&#10095;</button>
+        </div>
+
+        <h2>Pole climbing</h2>
+
+        <p class="activity-desc">
+            Test your nerve and balance as you climb to the top of our high poles.
+        </p>
+
+        <p class="activity-meta">
+            Max group size 6 • Ages 8+
+        </p>
+
+        <ul class="activity-links">
+            <li>
+            <a class="activity-btn"
+                href="https://en.wikipedia.org/wiki/Pole_climbing"
+                target="_blank" rel="noopener noreferrer">
+                Learn about Pole climbing
+            </a>
+            </li>
+        </ul>
+        </div>
+
+    </div>
+    </main>
+
+
+    <footer class="site-footer">
+    <!-- Scrolling reviews -->
+    <div class="reviews-strip">
+        <div class="reviews-track" id="reviewsTrack"></div>
+    </div>
+    <!-- Static information bar -->
+    <div class="info-bar">
+        <p>
+        Our activities are very popular with youth groups including Scouts and Guides.
+        <br>
+        To book your next adventure at Lochquarry, please phone <strong>01475 229 8311</strong>.
+        </p>
+    </div>
+    </footer>
+    
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-overlay" id="closeBookingOverlay"></div>
+
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+        <div class="modal-header">
+        <h3 id="bookingTitle">Booking Request</h3>
+        <button class="modal-close" id="closeBookingBtn" aria-label="Close booking form">×</button>
+        </div>
+
+        <form id="bookingForm">
+        <label>First name
+            <input type="text" id="firstName" required>
+        </label>
+
+        <label>Phone number
+            <input type="tel" id="phoneNumber" required>
+        </label>
+
+        <label>Booking date & time
+            <input type="datetime-local" id="bookingTime" required>
+        </label>
+
+        <label>Activity
+            <select id="activity" required>
+            <option value="">Select an activity</option>
+            <option>Hillwalking</option>
+            <option>Archery</option>
+            <option>Orienteering</option>
+            <option>Axe throwing</option>
+            <option>Kayaking</option>
+            <option>Canoeing</option>
+            <option>Powerboating</option>
+            <option>Climbing</option>
+            <option>Abseiling</option>
+            <option>Pole climbing</option>
+            </select>
+        </label>
+
+        <label>Email
+            <input type="email" id="email" required>
+        </label>
+
+        <button type="submit" class="submit-btn">Submit booking</button>
+        </form>
+    </div>
+    </div>
+
+<script src="script.js"></script>
+ </body>
+</html>
