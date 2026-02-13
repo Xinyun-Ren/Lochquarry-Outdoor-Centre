@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lochquarry Outdoor Centre Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="banner"></div>
+    </header>
+
+    <nav>
+    <a href="Index.html">Home Page</a>
+    <a href="Land Based.html">Land Based</a>
+    <a href="Water Based.html">Water Based</a>
+    <a href="Rope Based.html">Rope Based</a>
+    <a href="Site Information.html">Site Information</a>
+    <button class="booking-btn" id="openBooking">Booking</button>
+    </nav>
+
+
+    <main>
+        <div class="cards">
+        <!--Land Based-->
+            <div class="card">
+                <!-- 图片区域 -->
+                <div class="image-area">
+                    <button class="prev-btn" onclick="prevLandImage()">&#10094;</button>
+                    <img id="landImage" src="image/Land Activities/Archery.jpg" alt="Land based activities">
+                    <button class="next-btn" onclick="nextLandImage()">&#10095;</button>
+                </div>  
+                <!-- 标题 -->
+                <a href="Land Based.html" class="card-link">
+                    <h2>Land Based</h2>
+                </a>
+                <!-- 活动列表 -->
+                <ul>
+                    <li>Hillwalking</li>
+                    <li>Archery</li>
+                    <li>Orienteering</li>
+                    <li>Axe throwing</li>
+                </ul>
+            </div>
+        <!--Water Based-->
+            <div class="card">
+                <!-- 图片区域 -->
+                <div class="image-area">
+                    <button class="prev-btn" onclick="prevWaterImage()">&#10094;</button>
+                    <img id="waterImage" src="image/Water Activities/Kayaking.jpg" alt="Water based activities">
+                    <button class="next-btn" onclick="nextWaterImage()">&#10095;</button>
+                </div>
+                <!-- 标题 -->
+                <a href="Water Based.html" class="card-link">
+                    <h2>Water Based</h2>
+                </a>
+                <!-- 活动列表 -->
+                <ul>
+                    <li>Kayaking</li>
+                    <li>Canoeing</li>
+                    <li>Powerboating</li>
+                </ul>
+            </div>
+        <!--Rope Based-->
+            <div class="card">
+                <!-- 图片区域 -->
+                <div class="image-area">
+                    <button class="prev-btn" onclick="prevRopeImage()">&#10094;</button>
+                    <img id="ropeImage" src="image/Rope Activities/Climbing.jpg" alt="Rope based activities">
+                    <button class="next-btn" onclick="nextRopeImage()">&#10095;</button>
+                </div>
+                <!-- 标题 -->
+                <a href="Rope Based.html" class="card-link">
+                    <h2>Rope Based</h2>
+                </a>
+                <!-- 活动列表 -->
+                <ul>
+                    <li>Climbing</li>
+                    <li>Abseiling</li>
+                    <li>Pole climbing</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+    <!-- Scrolling reviews -->
+    <div class="reviews-strip">
+        <div class="reviews-track" id="reviewsTrack"></div>
+    </div>
+    <!-- Static information bar -->
+    <div class="info-bar">
+        <p>
+        Our activities are very popular with youth groups including Scouts and Guides.
+        <br>
+        To book your next adventure at Lochquarry, please phone <strong>01475 229 8311</strong>.
+        </p>
+    </div>
+    </footer>
+    
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-overlay" id="closeBookingOverlay"></div>
+
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+        <div class="modal-header">
+        <h3 id="bookingTitle">Booking Request</h3>
+        <button class="modal-close" id="closeBookingBtn" aria-label="Close booking form">×</button>
+        </div>
+
+        <form id="bookingForm">
+        <label>First name
+            <input type="text" id="firstName" required>
+        </label>
+
+        <label>Phone number
+            <input type="tel" id="phoneNumber" required>
+        </label>
+
+        <label>Booking date & time
+            <input type="datetime-local" id="bookingTime" required>
+        </label>
+
+        <label>Activity
+            <select id="activity" required>
+            <option value="">Select an activity</option>
+            <option>Hillwalking</option>
+            <option>Archery</option>
+            <option>Orienteering</option>
+            <option>Axe throwing</option>
+            <option>Kayaking</option>
+            <option>Canoeing</option>
+            <option>Powerboating</option>
+            <option>Climbing</option>
+            <option>Abseiling</option>
+            <option>Pole climbing</option>
+            </select>
+        </label>
+
+        <label>Email
+            <input type="email" id="email" required>
+        </label>
+
+        <button type="submit" class="submit-btn">Submit booking</button>
+        </form>
+    </div>
+    </div>
+
+<script src="script.js"></script>
+ </body>
+</html>
